@@ -18,7 +18,7 @@ const HostelSlider = () => {
 
   useEffect(() => {
     axios
-      .get("http://13.51.207.78:3000/api/hostel")
+      .get("https://mydormiebackend.abdurrehmanshafique.online/api/hostel")
       .then((response) => {
         setHostelsData(response.data);
       })
