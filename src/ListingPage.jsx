@@ -17,7 +17,7 @@ const ListingPage = () => {
 
   const fetchHostels = async (universityId) => {
     try {
-      const response = await fetch("http://13.51.207.78:3000/hostels");
+      const response = await fetch("https://mydormiebackend.abdurrehmanshafique.online/hostels");
       const data = await response.json();
   
       // Filter hostels with id matching universityId

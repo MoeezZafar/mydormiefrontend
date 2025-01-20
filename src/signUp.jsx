@@ -61,7 +61,7 @@ const SignUp = () => {
         // Send email verification
         await sendEmailVerification(userCredential.user);
         console.log("Verification email sent");
-        const res = await fetch("http://13.51.207.78:3000/api/profile", {
+        const res = await fetch("https://mydormiebackend.abdurrehmanshafique.online/api/profile", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

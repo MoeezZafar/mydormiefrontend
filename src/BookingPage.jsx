@@ -5,10 +5,11 @@ import { BsCalendarDate, BsShieldLock } from "react-icons/bs";
 import Navbar from "./ui/navbar";
 import Footer from "./ui/Footer";
 import { FaUpload, FaCreditCard, FaPaypal, FaGoogle } from "react-icons/fa";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 const BookingPage = () => {
+  const navigate = useNavigate();
   const { id: hostelId } = useParams();
   const [ hostel, setHostel ] = useState({
       _id: null,
@@ -21,7 +22,7 @@ const BookingPage = () => {
       security_deposit: ''
     });
   const fetchData = async (hostelId) => {
-      const response = await fetch("http://13.51.207.78:3000/api/hosteldata", {
+      const response = await fetch("https://mydormiebackend.abdurrehmanshafique.online/api/hosteldata", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +86,7 @@ const BookingPage = () => {
   
     setLoading(true);
     try {
-      const response = await fetch('http://13.51.207.78:3000/api/bookings', {
+      const response = await fetch('https://mydormiebackend.abdurrehmanshafique.online/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -142,7 +143,7 @@ const BookingPage = () => {
           termsAgreed: false
         });
         
-        alert("Booking submitted successfully!");
+        navigate("/PostBooking");
       } else {
         throw new Error(data.message || 'Submission failed');
       }

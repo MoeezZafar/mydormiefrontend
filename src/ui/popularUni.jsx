@@ -29,7 +29,7 @@ const UniversitySlider = () => {
 
   useEffect(() => {
     axios
-      .get("http://13.51.207.78:3000/universities")
+      .get("https://mydormiebackend.abdurrehmanshafique.online/universities")
       .then((response) => {
         setUniversities(response.data);
       })

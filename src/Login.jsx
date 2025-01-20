@@ -82,7 +82,7 @@ const LoginPage = () => {
   
       // Profile fetch
       try {
-        const response = await fetch("http://13.51.207.78:3000/api/user", {
+        const response = await fetch("https://mydormiebackend.abdurrehmanshafique.online/api/user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

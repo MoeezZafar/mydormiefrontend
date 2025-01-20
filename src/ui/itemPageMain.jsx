@@ -19,7 +19,7 @@ const HostelPage = () => {
   const { id: hostelId } = useParams();
   // console.log(hostelId);
   const fetchData = async (hostelId) => {
-    const response = await fetch("http://13.51.207.78:3000/api/hosteldata", {
+    const response = await fetch("https://mydormiebackend.abdurrehmanshafique.online/api/hosteldata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

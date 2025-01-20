@@ -77,7 +77,7 @@ const ProfilePage = () => {
         throw new Error("User ID not found");
       }
 
-      const response = await fetch("http://13.51.207.78:3000/api/profileupdate", {
+      const response = await fetch("https://mydormiebackend.abdurrehmanshafique.online/api/profileupdate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

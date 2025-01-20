@@ -13,7 +13,7 @@ const NavigationButton = () => {
 
   useEffect(() => {
     axios
-      .get("http://13.51.207.78:3000/universities")
+      .get("https://mydormiebackend.abdurrehmanshafique.online/universities")
       .then((response) => {
         setUniversities(response.data); // Assuming response.data contains [{ id: "1", name: "NUST" }, ...]
       })
